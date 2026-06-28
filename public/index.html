@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>IoT Dashboard</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 18px; }
+      #charts { max-width: 900px; margin: auto; }
+      canvas { background: #fff; border: 1px solid #eee; }
+      .controls { text-align: center; margin-bottom: 12px; }
+    </style>
+  </head>
+  <body>
+    <h1>IoT Dashboard</h1>
+    <div class="controls">
+      <label>Refresh (ms): <input id="interval" type="number" value="2000" min="500" step="100"></label>
+      <label>Points: <input id="limit" type="number" value="200" min="10" max="10000"></label>
+      <button id="apply">Apply</button>
+    </div>
+
+    <div id="charts">
+      <canvas id="chart" width="900" height="400"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
